@@ -12,7 +12,7 @@ export class CursorCloud {
     private geometry: THREE.BufferGeometry
 
     private readonly POINTS = 100
-    private readonly radius = 0.05
+    private readonly radius = 0.02
     constructor(scene: THREE.Scene) {
         this.createVertices()
         const material = new THREE.PointsMaterial({ color: 0xffffff, size: 1, sizeAttenuation: false, blending: THREE.AdditiveBlending })

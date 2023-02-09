@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+#footer a {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#bigger-text {
+    font-size:48px !important;
+}
+#nav #bigger-text:hover {
+    font-size: 56px !important;
+}
+#nav a {
+    font-size: 36px;
+    padding:10px;
+    transition: 0.3s;
+}
+
+#nav a:hover {
+    font-size: 44px;
+}
+#nav, #footer {
+    z-index: 2;
+    width: 100%;
+    padding:10px;
+}
+#footer {
+    bottom:0;
+}
+#nav {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+canvas, #nav, #footer {
+    position: absolute;
+}
+
+html, body, canvas {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    font-family: 'Fira Sans', sans-serif;
+}

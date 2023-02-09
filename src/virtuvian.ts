@@ -8,7 +8,7 @@ export class Vitruvian {
         const loader = new STLLoader()
         const material = new THREE.PointsMaterial({ color: 0x090909, blending: THREE.AdditiveBlending, size: 1.1, sizeAttenuation: false });
         loader.load(
-            'Vitruvian.stl',
+            './assets/objects/Vitruvian.stl',
             function (geom: BufferGeometry) {
                 geom.center()
                 const points = new THREE.Points(geom, material)

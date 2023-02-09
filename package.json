@@ -42,6 +42,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "file-loader": "^6.2.0",
     "three": "^0.149.0",
     "three-addons": "^1.2.0"
   }

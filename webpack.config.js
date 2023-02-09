@@ -36,6 +36,18 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif|json)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
+            }
         ],
     },
     resolve: {
