@@ -3,6 +3,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: [
@@ -48,16 +49,16 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'main.[contenthash].css',
         }),
-        // new CopyPlugin({
-        //     patterns: [
-        //         {
-        //             from: './src/client/public', to: './', globOptions: {
-        //                 ignore: ['**/assets/**', '**/css/**', '**.html']
-        //             },
-        //             noErrorOnMissing: true
-        //         }
-        //     ],
-        // }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: './src', to: './', globOptions: {
+                        ignore: ['**/assets/**', '**/css/**', '**.html']
+                    },
+                    noErrorOnMissing: true
+                }
+            ],
+        }),
     ],
     devtool: 'source-map',
     output: {
@@ -70,7 +71,7 @@ module.exports = {
         ignored: /node_modules/,
     },
     devServer: {
-        static: './src/client/public',
+        static: './src',
         port: 8080,
         host: '0.0.0.0',
     },
