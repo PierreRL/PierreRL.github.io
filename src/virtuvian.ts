@@ -1,6 +1,6 @@
 import THREE, { BufferGeometry } from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import './assets/objects/Vitruvian.stl';
 
 export class Vitruvian {
 

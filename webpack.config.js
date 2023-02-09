@@ -33,7 +33,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|json)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|json|stl)$/i,
                 type: 'asset/resource',
             },
             {
@@ -65,7 +65,7 @@ module.exports = {
             patterns: [
                 {
                     from: './src', to: './', globOptions: {
-                        ignore: ['**/assets/**', '**/css/**', '**.html']
+                        ignore: ['**/assets/**', '**/css/**', '**.html', '**.ts']
                     },
                     noErrorOnMissing: true
                 }
