@@ -6,7 +6,7 @@ export class Vitruvian {
 
     constructor(scene: THREE.Scene) {
         const loader = new STLLoader()
-        const material = new THREE.PointsMaterial({ color: 0x060606, blending: THREE.AdditiveBlending, size: 1.1, sizeAttenuation: false });
+        const material = new THREE.PointsMaterial({ color: 0x090909, blending: THREE.AdditiveBlending, size: 1.1, sizeAttenuation: false });
         loader.load(
             'Vitruvian.stl',
             function (geom: BufferGeometry) {

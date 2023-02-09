@@ -4,18 +4,13 @@ h1 {
 #wrapper {
     z-index: 2;
 }
-#cloud {
-    z-index: 1;
-    background-color: 0x191170;
-    cursor:none;
-}
 
 canvas, #wrapper {
     position: absolute;
+    cursor:none;
 }
 
 html, body, canvas {
     margin: 0;
     padding: 0;
 }
-
