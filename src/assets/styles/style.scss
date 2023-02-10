@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+a, .icon {
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
 
 a {
     text-decoration: none;
@@ -7,45 +12,105 @@ a {
     cursor: none;
 }
 
-#footer a {
-    font-size: 20px;
-    display: flexbox;
-    justify-content: center;
-}
 #bigger-text {
-    font-size:48px !important;
+    font-size:48px;
 }
 #bigger-text:hover {
-    font-size: 64px !important;
+    font-size: 52px;
 }
-#nav a {
+$footer-text-color:rgb(162, 162, 162);
+footer a {
+    color:$footer-text-color;
+    padding: 10px;
+}
+footer a:hover {
+    color:rgb(225, 225, 225);
+}
+footer a:hover .icon {
+    background-color:rgb(225, 225, 225);
+}
+nav a {
     color:rgb(158, 151, 184);
     opacity: 0.5;
-    font-size: 36px;
-    padding:10%;
-    transition: 0.5s;
+    font-size: 24px;
     padding: 40px;
 }
 
-#nav a:hover {
+nav a:hover {
     opacity: 1;
     color:rgb(204, 199, 219);
-    font-size: 48px;
+    font-size: 36px;
 }
-#nav, #footer {
+nav, footer {
     z-index: 2;
     width: 100%;
     padding:0px;
 }
-#footer {
-    bottom:0;
+.neighbour-link:hover {
+    color: rgb(217, 76, 212);
 }
-#nav {
+.start {
+    margin-left: 10px;
+}
+#linkedin:hover {
+    color: #4ebaf4;
+}
+footer a:hover #linkedin-icon {
+    background-color:rgb(225, 225, 225);
+}
+#youtube:hover {
+    color: #fe3636;
+}
+footer a:hover #youtube-icon {
+    background-color:#fe3636;
+}
+.icon-text {
+    padding:10px 10px 10px 5px;
+}
+$icon-width:30px;
+.icon {
+    display:inline-block;
+    margin:0;
+    margin-left:10px;
+    width:$icon-width;
+    height:$icon-width;
+    mask-size:$icon-width $icon-width;
+    -webkit-mask-size:$icon-width $icon-width;
+    background-color:$footer-text-color;
+}
+.footer-link {
+    display: flex;
+    align-items: center;
+}
+#github-icon {
+    mask-image: url('../images/github-icon.png');
+    -webkit-mask-image: url('../images/github-icon.png');
+}
+#youtube-icon {
+    mask-image: url('../images/youtube-icon.png');
+    -webkit-mask-image: url('../images/youtube-icon.png');
+}
+.end {
+    margin-right: 10px;
+}
+footer {
+    bottom:0;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+}
+footer div {
+    margin:auto;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+nav {
     display: flex;
     justify-content:center;
 }
 
-canvas, #nav, #footer {
+canvas, nav, footer {
     position: absolute;
 }
 
@@ -53,5 +118,5 @@ html, body, canvas, div {
     margin: 0;
     padding: 0;
     cursor: none;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
