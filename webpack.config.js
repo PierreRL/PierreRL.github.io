@@ -33,7 +33,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|json)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|json|obj)$/i,
                 type: 'asset/resource'
             },
             {
@@ -48,18 +48,18 @@ module.exports = {
                     }
                 ]
             },
-            {
-                test: /\.(stl|gltf|obj)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'assets/objects/'
-                        }
-                    }
-                ]
-            }
+            // {
+            //     test: /\.(stl|gltf|obj)(\?v=\d+\.\d+\.\d+)?$/,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: '/'
+            //             }
+            //         }
+            //     ]
+            // }
         ],
     },
     resolve: {
