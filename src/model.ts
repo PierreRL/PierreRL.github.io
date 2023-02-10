@@ -19,7 +19,6 @@ export class Model {
     private solidMaterial = new THREE.MeshBasicMaterial({ color: this.color, blending: THREE.AdditiveBlending })
 
     constructor(private readonly fileName: string, private readonly scale: number = 1, private scene: THREE.Scene, private readonly isPoints = true) {
-
         const gltfLoader = new GLTFLoader()
         const solidMaterials = new THREE.MeshBasicMaterial({ color: 0xffffff })
         const fileExtension = this.fileName.slice(this.fileName.indexOf('.') + 1)
