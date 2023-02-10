@@ -1,7 +1,7 @@
-import * as THREE from 'three';
-import * as BufferGeometryUtils from "three/examples/jsm/utils/BufferGeometryUtils.js";
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import * as THREE from 'three'
+import * as BufferGeometryUtils from "three/examples/jsm/utils/BufferGeometryUtils.js"
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 export class Model {
 
@@ -15,7 +15,7 @@ export class Model {
     private colorDirection: number = 1
     private saturation = 0.5
     private lightness = 0.1
-    private color = new THREE.Color('hsl(' + this.hue + ',' + this.saturation + ',' + this.lightness + ')')
+    private color = new THREE.Color().setHSL(this.hue, this.saturation, this.lightness)
     private material = new THREE.PointsMaterial({ color: this.color, blending: THREE.AdditiveBlending, size: 1, sizeAttenuation: false })
     private solidMaterial = new THREE.MeshBasicMaterial({ color: this.color, blending: THREE.AdditiveBlending })
 

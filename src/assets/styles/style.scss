@@ -4,12 +4,13 @@ a {
     text-decoration: none;
     color: white;
     text-align: center;
+    cursor: none;
 }
 
 #footer a {
     font-size: 20px;
-    display: flex;
-    justify-content: space-between;
+    display: flexbox;
+    justify-content: center;
 }
 #bigger-text {
     font-size:48px !important;
@@ -18,7 +19,8 @@ a {
     font-size: 64px !important;
 }
 #nav a {
-    color:rgb(82, 68, 132);
+    color:rgb(158, 151, 184);
+    opacity: 0.5;
     font-size: 36px;
     padding:10%;
     transition: 0.5s;
@@ -26,8 +28,8 @@ a {
 }
 
 #nav a:hover {
-    color:rgb(140, 125, 195);
-    cursor: none;
+    opacity: 1;
+    color:rgb(204, 199, 219);
     font-size: 48px;
 }
 #nav, #footer {

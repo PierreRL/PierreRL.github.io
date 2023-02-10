@@ -1,14 +1,14 @@
-import THREE, { Vector3 } from "three"
+import * as THREE from 'three'
 
 export class CursorCloud {
 
-    private driftSpeeds: Vector3[] = []
+    private driftSpeeds: THREE.Vector3[] = []
 
     private readonly maxSpeed = 0.0008
     private tx: number = 0
     private ty: number = 0
 
-    private points: Vector3[] = []
+    private points: THREE.Vector3[] = []
     private geometry: THREE.BufferGeometry
 
     private readonly POINTS = 100
@@ -61,16 +61,16 @@ export class CursorCloud {
             const y = Math.random() * this.radius * 2 - this.radius
             if (Math.sqrt(x ** 2 + y ** 2) < this.radius) {  // only use points inside the unit sphere
                 this.driftSpeeds[i] = this.randomVelocity()
-                this.points[i] = new Vector3(x, y, 0)
+                this.points[i] = new THREE.Vector3(x, y, 0)
                 i++
             }
         }
     }
 
-    private randomVelocity(): Vector3 {
+    private randomVelocity(): THREE.Vector3 {
         let dx = Math.random() * 2 * this.maxSpeed - this.maxSpeed;
         let dy = Math.random() * 2 * this.maxSpeed - this.maxSpeed;
-        return new Vector3(dx, dy, 0);
+        return new THREE.Vector3(dx, dy, 0);
     }
 }
 

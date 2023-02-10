@@ -1,8 +1,8 @@
 import './assets/styles/style.scss'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { Model } from './model';
-import { CursorCloud } from './cursor_cloud';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { Model } from './model'
+import { CursorCloud } from './cursor_cloud'
 
 const renderer = new THREE.WebGLRenderer()
 renderer.autoClear = false
