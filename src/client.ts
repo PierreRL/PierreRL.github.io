@@ -45,3 +45,15 @@ function animate() {
 }
 
 animate()
+
+
+function setUpCanvas() {
+    const ratio = window.innerWidth / window.innerHeight
+    cursorCamera.aspect = ratio
+    cursorCamera.position.z = ratio * (31 / 24)
+    cursorCamera.updateProjectionMatrix()
+    camera.aspect = ratio
+    camera.updateProjectionMatrix()
+    renderer.setSize(window.innerWidth, window.innerHeight)
+}
+window.addEventListener('resize', setUpCanvas, false)

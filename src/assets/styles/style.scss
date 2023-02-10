@@ -56,7 +56,7 @@ nav, footer {
     color: #4ebaf4;
 }
 footer a:hover #linkedin-icon {
-    background-color:rgb(225, 225, 225);
+    background-color:#4ebaf4;
 }
 #youtube:hover {
     color: #fe3636;
@@ -89,6 +89,10 @@ $icon-width:30px;
 #youtube-icon {
     mask-image: url('../images/youtube-icon.png');
     -webkit-mask-image: url('../images/youtube-icon.png');
+}
+#linkedin-icon {
+    mask-image: url('../images/linkedin-icon.png');
+    -webkit-mask-image: url('../images/linkedin-icon.png');
 }
 .end {
     margin-right: 10px;
