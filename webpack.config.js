@@ -49,7 +49,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(stl)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(stl|gltf|obj)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                     {
                         loader: 'file-loader',

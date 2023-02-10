@@ -1,7 +1,7 @@
 import './assets/styles/style.scss'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { Vitruvian } from './virtuvian';
+import { Model } from './model';
 import { CursorCloud } from './cursor_cloud';
 
 const renderer = new THREE.WebGLRenderer()
@@ -22,21 +22,25 @@ controls.maxDistance = 2.5
 controls.minDistance = 1
 controls.enableZoom = true
 
-camera.position.y = -1.8
+camera.position.z = 10
+camera.lookAt(new THREE.Vector3(0, 0, 0))
 
 const cursorCloudScene = new THREE.Scene()
 const cursorCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 cursorCamera.position.z = (window.innerHeight / window.innerWidth) * (31 / 24)
 
-const vitruvian = new Vitruvian(scene)
+const model = new Model('mandalorian.obj', 1.7, scene, true)
 const cursor_cloud = new CursorCloud(cursorCloudScene)
+const clock = new THREE.Clock(true)
 function animate() {
-    requestAnimationFrame(animate);
+    const delta = clock.getDelta()
     cursor_cloud.udpate()
+    model.update(delta)
     controls.update()
     renderer.clear()
     renderer.render(scene, camera)
     renderer.render(cursorCloudScene, cursorCamera)
+    requestAnimationFrame(animate)
 }
 
 animate()

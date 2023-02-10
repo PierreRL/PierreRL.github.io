@@ -14,36 +14,40 @@ a {
 #bigger-text {
     font-size:48px !important;
 }
-#nav #bigger-text:hover {
-    font-size: 56px !important;
+#bigger-text:hover {
+    font-size: 64px !important;
 }
 #nav a {
+    color:rgb(82, 68, 132);
     font-size: 36px;
-    padding:10px;
-    transition: 0.3s;
+    padding:10%;
+    transition: 0.5s;
+    padding: 40px;
 }
 
 #nav a:hover {
-    font-size: 44px;
+    color:rgb(140, 125, 195);
+    cursor: none;
+    font-size: 48px;
 }
 #nav, #footer {
     z-index: 2;
     width: 100%;
-    padding:10px;
+    padding:0px;
 }
 #footer {
     bottom:0;
 }
 #nav {
     display: flex;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 
 canvas, #nav, #footer {
     position: absolute;
 }
 
-html, body, canvas {
+html, body, canvas, div {
     margin: 0;
     padding: 0;
     cursor: none;
