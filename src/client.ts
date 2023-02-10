@@ -30,7 +30,7 @@ const cursorCloudScene = new THREE.Scene()
 const cursorCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 cursorCamera.position.z = (window.innerHeight / window.innerWidth) * (31 / 24)
 
-const model = new Model('mandalorian.obj', 1.7, scene, true)
+const model = new Model('Mandalorian.obj', 1.7, scene, true)
 const cursor_cloud = new CursorCloud(cursorCloudScene)
 const clock = new THREE.Clock(true)
 function animate() {
