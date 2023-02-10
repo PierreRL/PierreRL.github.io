@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import * as BufferGeometryUtils from "three/examples/jsm/utils/BufferGeometryUtils.js"
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-const Object = require('./assets/objects/mandalorian.obj');
+import './assets/objects/mandalorian.obj';
 
 export class Model {
 
@@ -20,12 +20,11 @@ export class Model {
 
     constructor(private readonly fileName: string, private readonly scale: number = 1, private scene: THREE.Scene, private readonly isPoints = true) {
         const gltfLoader = new GLTFLoader()
-        const solidMaterials = new THREE.MeshBasicMaterial({ color: 0xffffff })
         const fileExtension = this.fileName.slice(this.fileName.indexOf('.') + 1)
         if (fileExtension == 'obj') {
             const objloader = new OBJLoader()
             objloader.load(
-                Object + this.fileName,
+                './assets/objects/' + this.fileName,
                 this.addObj.bind(this),
                 (xhr) => {
                     //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -37,7 +36,7 @@ export class Model {
         }
         else if (fileExtension == 'gltf') {
             gltfLoader.load(
-                './assets/objects/' + this.fileName,
+                this.fileName,
                 this.addGLTF.bind(this),
                 (xhr) => {
                     //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
