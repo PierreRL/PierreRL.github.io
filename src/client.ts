@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { Model } from './model'
 import { CursorCloud } from './cursor_cloud'
-import './assets/objects/Mandalorian.obj'
+
 
 const renderer = new THREE.WebGLRenderer()
 renderer.autoClear = false
