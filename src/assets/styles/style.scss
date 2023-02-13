@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
 
 a, .icon {
-    transition: 0.5s;
     transition-timing-function: ease-out;
+    transition: 0.5s;
 }
-
 a {
     text-decoration: none;
     color: white;
@@ -100,27 +99,48 @@ $icon-width:30px;
 footer {
     bottom:0;
     width: 100%;
-    margin-bottom: 10px;
-    display: flex;
-}
-footer div {
-    margin:auto;
-    align-self: center;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+footer #central-links {
+    display: flex;
+    justify-content: center;
 }
 nav {
     display: flex;
     justify-content:center;
+    justify-self: start;
 }
-
-canvas, nav, footer {
+main {
+    flex: 1;
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+#percent-loaded-label {
+    color:white;
+}
+canvas, #wrapper {
+    min-height: 100vh;
+    width: 100vw;
     position: absolute;
+    top: 0;
+    left: 0;
+}
+#wrapper {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 html, body, canvas, div {
     margin: 0;
     padding: 0;
     cursor: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */    
     font-family: 'Roboto Mono', monospace;
 }

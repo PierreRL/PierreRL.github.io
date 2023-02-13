@@ -5,15 +5,16 @@ import { Model } from './model'
 import { CursorCloud } from './cursor_cloud'
 
 
-const renderer = new THREE.WebGLRenderer()
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas') as HTMLCanvasElement })
 renderer.autoClear = false
 renderer.setSize(window.innerWidth, window.innerHeight)
-document.body.appendChild(renderer.domElement)
+
+const ratio = window.innerWidth / (window.innerHeight)
 
 const scene = new THREE.Scene()
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-const controls = new OrbitControls(camera, renderer.domElement)
+const camera = new THREE.PerspectiveCamera(75, ratio, 0.1, 1000)
+const controls = new OrbitControls(camera, document.body)
 if (scene == null) {
     throw new Error()
 }
@@ -27,12 +28,14 @@ camera.position.z = 10
 camera.lookAt(new THREE.Vector3(0, 0, 0))
 
 const cursorCloudScene = new THREE.Scene()
-const cursorCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-cursorCamera.position.z = (window.innerHeight / window.innerWidth) * (31 / 24)
+const cursorCamera = new THREE.PerspectiveCamera(75, ratio, 0.1, 1000)
+cursorCamera.position.z = (1 / ratio) * (31 / 24)
 
 const model = new Model('Mandalorian.obj', 1.7, scene, true)
 const cursor_cloud = new CursorCloud(cursorCloudScene)
 const clock = new THREE.Clock(true)
+
+
 function animate() {
     const delta = clock.getDelta()
     cursor_cloud.udpate()
@@ -46,14 +49,13 @@ function animate() {
 
 animate()
 
-
-function setUpCanvas() {
-    const ratio = window.innerWidth / window.innerHeight
+function onResize() {
+    const ratio = window.innerWidth / (window.innerHeight)
     cursorCamera.aspect = ratio
-    cursorCamera.position.z = ratio * (31 / 24)
+    cursorCamera.position.z = (1 / ratio) * (31 / 24)
     cursorCamera.updateProjectionMatrix()
     camera.aspect = ratio
     camera.updateProjectionMatrix()
     renderer.setSize(window.innerWidth, window.innerHeight)
 }
-window.addEventListener('resize', setUpCanvas, false)
+window.addEventListener('resize', onResize, false)

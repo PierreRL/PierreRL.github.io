@@ -5,31 +5,38 @@
 </head>
 
 <body>
-    <nav>
-        <a>projects</a>
-        <a id="bigger-text" href="/">pierre.wiki</a>
-        <a>blog</a>
-    </nav>
+    <div id="wrapper">
+        <nav>
+            <a>projects</a>
+            <a id="bigger-text" href="/">pierre.wiki</a>
+            <a>blog</a>
+        </nav>
+        <main>
+            <span id='percent-loaded-label'>Loading Model</span>
+        </main>
 
-    <footer>
-        <a class="neighbour-link start" href="https://experiments.tomasmaillo.com/">TomasMaillo</a>
-        <div id="central-links">
-            <a class="footer-link" id='linkedin' href="https://www.linkedin.com/in/pierre-lardet-351ba425b/">
-                <div class='icon' id="linkedin-icon"></div>
-                <span class="icon-text">Linkedin</span>
-            </a>
-            <a class="footer-link" id='youtube' href="https://www.youtube.com/channel/UCKa3knyiqmvkmbgASm6suqg">
-                <div class='icon' id="youtube-icon"></div>
-                <span class="icon-text">Youtube</span>
-            </a>
+        <footer>
+            <a class="neighbour-link start" href="https://experiments.tomasmaillo.com/">TomasMaillo</a>
+            <div id="central-links">
+                <a class="footer-link" id='linkedin' href="https://www.linkedin.com/in/pierre-lardet-351ba425b/">
+                    <div class='icon' id="linkedin-icon"></div>
+                    <span class="icon-text">Linkedin</span>
+                </a>
+                <a class="footer-link" id='youtube' href="https://www.youtube.com/channel/UCKa3knyiqmvkmbgASm6suqg">
+                    <div class='icon' id="youtube-icon"></div>
+                    <span class="icon-text">Youtube</span>
+                </a>
 
-            <a class="footer-link" id="github" href="https://github.com/PierreRL">
-                <div class='icon' id="github-icon"></div>
-                <span class="icon-text">Github</span>
-            </a>
-        </div>
-        <a class="neighbour-link end" href='https://stanflint.dev'>stanflint.dev</a>
-    </footer>
+                <a class="footer-link" id="github" href="https://github.com/PierreRL">
+                    <div class='icon' id="github-icon"></div>
+                    <span class="icon-text">Github</span>
+                </a>
+            </div>
+            <a class="neighbour-link end" href='https://stanflint.dev'>stanflint.dev</a>
+        </footer>
+    </div>
+    <canvas id="canvas"></canvas>
+
 </body>
 
 </html>

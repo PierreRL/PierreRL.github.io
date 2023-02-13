@@ -17,6 +17,7 @@ export class Model {
     private color = new THREE.Color().setHSL(this.hue, this.saturation, this.lightness)
     private material = new THREE.PointsMaterial({ color: this.color, blending: THREE.AdditiveBlending, size: 1, sizeAttenuation: false })
     private solidMaterial = new THREE.MeshBasicMaterial({ color: this.color, blending: THREE.AdditiveBlending })
+    private loadingText = document.getElementById('percent-loaded-label')
 
     constructor(private readonly fileName: string, private readonly scale: number = 1, private scene: THREE.Scene, private readonly isPoints = true) {
         const gltfLoader = new GLTFLoader()
@@ -27,7 +28,7 @@ export class Model {
                 './assets/objects/' + this.fileName,
                 this.addObj.bind(this),
                 (xhr) => {
-                    //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+                    this.loading(xhr.loaded / xhr.total)
                 },
                 (error) => {
                     console.log(error)
@@ -39,7 +40,7 @@ export class Model {
                 this.fileName,
                 this.addGLTF.bind(this),
                 (xhr) => {
-                    //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+                    this.loading(xhr.loaded / xhr.total)
                 },
                 (error) => {
                     console.log(error)
@@ -66,6 +67,12 @@ export class Model {
         else {
             this.mesh.material = new THREE.MeshBasicMaterial({ color: this.color, blending: THREE.AdditiveBlending })
         }
+    }
+
+    private loading(percentage: number) {
+        if (this.loadingText == undefined) return
+        if (percentage == 1) this.loadingText.style.display = 'none'
+        this.loadingText.innerHTML = 'Loading model: ' + percentage * 100 + '%'
     }
 
     private addGLTF(gltf: GLTF) {
