@@ -71,7 +71,7 @@ export class Model {
 
     private loading(percentage: number) {
         if (this.loadingText == undefined) return
-        //if (percentage == 1) this.loadingText.style.display = 'none'
+        if (percentage == 1) this.loadingText.style.display = 'none'
         this.loadingText.innerHTML = 'Loading model: ' + Math.trunc(percentage * 100) + '%'
     }
 
