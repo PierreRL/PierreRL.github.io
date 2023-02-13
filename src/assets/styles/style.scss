@@ -69,7 +69,6 @@ footer a:hover #youtube-icon {
 $icon-width:30px;
 .icon {
     display:inline-block;
-    margin:0;
     margin-left:10px;
     width:$icon-width;
     height:$icon-width;
@@ -115,7 +114,9 @@ nav {
 main {
     flex: 1;
     color:white;
+    align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 #percent-loaded-label {
