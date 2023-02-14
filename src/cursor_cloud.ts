@@ -5,11 +5,13 @@ export class CursorCloud {
     private driftSpeeds: THREE.Vector3[] = []
 
     private readonly maxSpeed = 0.0008
+    private _isVisible = false
     private tx: number = 0
     private ty: number = 0
 
     private points: THREE.Vector3[] = []
     private geometry: THREE.BufferGeometry
+    private pointsMesh: THREE.Points
 
     private readonly POINTS = 100
     private readonly radius = 0.02
@@ -18,15 +20,26 @@ export class CursorCloud {
         const material = new THREE.PointsMaterial({ color: 0xffffff, size: 1, sizeAttenuation: false, blending: THREE.AdditiveBlending })
         this.geometry = new THREE.BufferGeometry()
         this.initControls()
-        const mesh = new THREE.Points(this.geometry, material)
-        scene.add(mesh)
+        this.pointsMesh = new THREE.Points(this.geometry, material)
+        this.pointsMesh.visible = false
+        scene.add(this.pointsMesh)
     }
 
     private initControls() {
         window.addEventListener('mousemove', (e) => {
+            this.isVisible = true
             this.tx = ((e.clientX) / window.innerWidth) * 2 - 1;
             this.ty = - ((e.clientY) / window.innerHeight) * 2 + 1;
         })
+        document.addEventListener('mouseleave', () => { console.log('hello'); this.isVisible = false })
+    }
+
+    set isVisible(val: boolean) {
+        this.pointsMesh.visible = val
+        this._isVisible = val
+    }
+    get isVisible() {
+        return this._isVisible
     }
 
     udpate() {
