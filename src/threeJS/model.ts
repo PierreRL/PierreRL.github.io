@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import * as BufferGeometryUtils from "three/examples/jsm/utils/BufferGeometryUtils.js"
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import './assets/objects/Mandalorian.obj';
+import '../assets/objects/Mandalorian.obj';
 
 export class Model {
 
@@ -25,7 +25,7 @@ export class Model {
         if (fileExtension == 'obj') {
             const objloader = new OBJLoader()
             objloader.load(
-                './assets/objects/' + this.fileName,
+                '../assets/objects/' + this.fileName,
                 this.addObj.bind(this),
                 (xhr) => {
                     this.loading(xhr.loaded / xhr.total)

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+
+
+nav, footer {
+    z-index: 2;
+    padding:0;
+    margin:0;
+    width:100%;
+    max-width: 100%;
+    background-color: #E75A7C;
+}
+
+nav {
+    display: flex;
+    justify-content:center;
+    #bigger-text {
+        font-size:42px;
+    }
+    #bigger-text:hover {
+        font-size: 48px;
+    }
+    a {
+        color:rgb(255, 255, 255);
+        opacity: 0.5;
+        font-size: 24px;
+        padding: 40px;
+    }
+    a:hover {
+        color:rgb(77, 32, 32);
+        font-size: 36px;
+    }
+}
+
+$footer-text-color:rgb(214, 156, 156);
+$icon-width:30px;
+
+footer {
+    bottom:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        color:$footer-text-color;
+        padding: 10px;
+    }
+    a:hover {
+        color: #e1e1e1;
+    }
+    a:hover .icon {
+        background-color:#e1e1e1;
+    }
+    #central-links {
+        display: flex;
+        justify-content: center;
+    }
+    .icon {
+        display:inline-block;
+        margin-left:10px;
+        width:$icon-width;
+        height:$icon-width;
+        mask-size:$icon-width $icon-width;
+        -webkit-mask-size:$icon-width $icon-width;
+        background-color:$footer-text-color;
+    }
+    .footer-link {
+        display: flex;
+        align-items: center;
+    }
+    .icon-text {
+        padding:10px 10px 10px 5px;
+    }
+    .start {
+        margin-left: 10px;
+    }
+    .end {
+        margin-right: 10px;
+    }
+    .neighbour-link:hover {
+        color: rgb(98, 13, 95);
+    }
+    #linkedin:hover {
+        color: #0a5c8b;
+    }
+    a:hover #linkedin-icon {
+        background-color:#0a5c8b;
+    }
+    #youtube:hover {
+        color: #891026;
+    }
+    a:hover #youtube-icon {
+        background-color:#891026;
+    }
+    #github-icon {
+        mask-image: url('../images/github-icon.png');
+        -webkit-mask-image: url('../images/github-icon.png');
+    }
+    #youtube-icon {
+        mask-image: url('../images/youtube-icon.png');
+        -webkit-mask-image: url('../images/youtube-icon.png');
+    }
+    #linkedin-icon {
+        mask-image: url('../images/linkedin-icon.png');
+        -webkit-mask-image: url('../images/linkedin-icon.png');
+    }
+}
+

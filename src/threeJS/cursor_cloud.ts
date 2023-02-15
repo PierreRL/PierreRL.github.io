@@ -44,7 +44,6 @@ export class CursorCloud {
 
     udpate() {
         this.updateForDrift()
-
     }
 
     private updateForDrift() {

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: #230447;
+    max-width: 100%;
+}
+
+html, body, canvas, div {
+    margin: 0;
+    padding: 0;
+    color: #F2F5EA;
+    cursor: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */    
+    font-family: 'Roboto Mono', monospace;
+}
+main {
+    flex: 1;
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100vw;
+    h1 {
+        margin-left:10vw;
+        margin-top:10vw;
+        margin-bottom:5vw;
+        font-size: 50px;
+        align-self:flex-start;
+    }
+    p {
+        margin-left:10vw;
+        font-size: 24px;
+        align-self:flex-start;
+    }
+}
+
+a, .icon {
+    transition-timing-function: ease-out;
+    transition: 0.5s;
+}
+a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor: none;
+}
+
+#percent-loaded-label {
+    color:white;
+}
+#model-canvas, #wrapper {
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#wrapper {
+    z-index: 1;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#cloud-canvas {
+    z-index: 2;   
+    position: fixed;
+    pointer-events: none;
+}
+
