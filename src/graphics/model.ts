@@ -19,7 +19,8 @@ export class Model {
     private solidMaterial = new THREE.MeshBasicMaterial({ color: this.color, blending: THREE.AdditiveBlending })
     private loadingText = document.getElementById('percent-loaded-label')
 
-    constructor(private readonly fileName: string, private readonly scale: number = 1, private scene: THREE.Scene, private readonly isPoints = true) {
+    constructor(private readonly fileName: string, private readonly scale: number = 1, private scene: THREE.Scene, private readonly isPoints = true,
+        private rotateX: number, private rotateY: number, private rotateZ: number) {
         const gltfLoader = new GLTFLoader()
         const fileExtension = this.fileName.slice(this.fileName.indexOf('.') + 1)
         if (fileExtension == 'obj') {
@@ -95,6 +96,9 @@ export class Model {
         const box = geom.boundingBox.max
         const maxBox = Math.max(box.x, box.y, box.z)
         geom.center()
+        geom.rotateX(this.rotateX)
+        geom.rotateY(this.rotateY)
+        geom.rotateZ(this.rotateZ)
         geom.scale(this.scale / maxBox, this.scale / maxBox, this.scale / maxBox)
         if (this.isPoints) {
             this.points = new THREE.Points(geom, this.material)

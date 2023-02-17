@@ -33,8 +33,7 @@
             color:$on-accent-fade;
         }
     }
-    #music {
-        background-image: url('../images/logic_screen.png');
+    .image {
         background-position: center;
         background-size: 120%;
         width: 100%;
@@ -43,7 +42,17 @@
         transition-timing-function: ease-out;
         border-radius: 0 0 10px 10px;
     }
+    #music {
+        background-image: url('../images/logic_screen.png');
+    }
+    #coding {
+        background-image: url('../images/coding.png');
+    }
+    #blog {
+        background-position: top;
+        background-image: url('../images/blog.jpg');
+    }
 }
-.card:hover #music {
+.card:hover .image {
     background-size: 150%;
 }

@@ -39,12 +39,13 @@ main {
     flex-direction: column;
     max-width: 100%;
     .typewriter-wrapper {
-        padding:20% 20% 20% 20%;
+        padding:20vh 20% 20vh 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-height:60%;
+        height: 60vh;
+        width: 50%;
         h1 {
             text-align: center;
             color:$off-white;
@@ -139,6 +140,7 @@ a {
 #cloud-canvas {
     z-index: 2;   
     position: fixed;
+    width:100vw;
     pointer-events: none;
 }
 

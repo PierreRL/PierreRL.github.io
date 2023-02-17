@@ -30,7 +30,7 @@ const cursorCloudScene = new THREE.Scene()
 const cursorCamera = new THREE.PerspectiveCamera(75, ratio, 0.1, 1000)
 cursorCamera.position.z = (1 / ratio) * (31 / 24)
 
-const model = new Model('Mandalorian.obj', 1.7, scene, true)
+const model = new Model('dog.obj', 1.7, scene, true, Math.PI / 2, -Math.PI, Math.PI)
 const cursor_cloud = new CursorCloud(cursorCloudScene)
 const clock = new THREE.Clock(true)
 

@@ -29,10 +29,10 @@ function startTyping() {
     const titleText = 'Meet Me...'
 
     const paragraph = document.getElementById('paragraph') as HTMLElement
-    const paragraphText = '- 19 year old from Scotland \\\\- 2nd year Maths and CompSci at the University of Edinburgh\\\\- English, French (y un poco de español)'
+    const paragraphText = '- 19 year old from Scotland \\\\- 2nd year Maths and CompSci at the University of Edinburgh\\\\- English🇬🇧, French🇫🇷 (y un poco de español🇪🇸)'
 
-    const paraTyper = new TypeWriter(paragraph, paragraphText, 10, delay, 10, true, () => setTimeout(makeButtonVisible, delay))
-    const titleTyper = new TypeWriter(title, titleText, 10, 0, 0, false, paraTyper.start.bind(paraTyper))
+    const paraTyper = new TypeWriter(paragraph, paragraphText, 40, delay, 10, true, () => setTimeout(makeButtonVisible, delay))
+    const titleTyper = new TypeWriter(title, titleText, 100, 0, 0, false, paraTyper.start.bind(paraTyper))
     titleTyper.start()
 }
 
