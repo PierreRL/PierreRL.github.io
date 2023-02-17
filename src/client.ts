@@ -1,5 +1,10 @@
-import './assets/styles/main-style.scss'
-import './assets/styles/nav-footer.scss'
-import { start } from './graphics/three-manager';
+import './assets/styles/styles.scss'
+import { start } from './graphics/three-manager'
+import { setUpStartAnimations } from './graphics/startup-animations'
 
-start()
+setup()
+
+function setup() {
+    setUpStartAnimations()
+    start()
+}

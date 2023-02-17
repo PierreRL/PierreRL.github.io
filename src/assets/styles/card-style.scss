@@ -1,0 +1,49 @@
+@import 'colors.scss';
+
+.card-container {
+    max-width: 100%;
+    padding:0 10%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-evenly;
+    row-gap: 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card {
+    height:clamp(200px, 30vh, 400px);
+    width: clamp(200px, 40%, 400px);
+    background-color: $accent-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .card-inner {
+        color:$background-color;
+        text-align: center;
+        padding:10px;
+        h1 {
+            text-align: center;
+        }
+        span a {
+            color:$on-accent-color;
+        }
+        span a:hover {
+            color:$on-accent-fade;
+        }
+    }
+    #music {
+        background-image: url('../images/logic_screen.png');
+        background-position: center;
+        background-size: 120%;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+        border-radius: 0 0 10px 10px;
+    }
+}
+.card:hover #music {
+    background-size: 150%;
+}

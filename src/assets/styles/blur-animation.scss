@@ -1,0 +1,25 @@
+.blur {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-10%);
+}
+.blur-in {
+    opacity: 1;
+    transition: all 2s;
+    filter: blur(0);
+    transform: translateX(0);
+}
+@media(prefers-reduce-motion) {
+    .blur {
+        transition: none;
+    }
+}
+.delay1 {
+    animation-delay:500ms;
+}
+.delay2 {
+    animation-delay:1s;
+}
+
+
+

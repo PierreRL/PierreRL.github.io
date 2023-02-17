@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
-
-
+@import 'colors.scss';
 
 nav, footer {
     z-index: 2;
+    position: absolute;
     padding:0;
     margin:0;
     width:100%;
     max-width: 100%;
-    background-color: #E75A7C;
+    background-color: $accent-color;
 }
 
 nav {
+    position: absolute;
+    top:0;
     display: flex;
     justify-content:center;
     #bigger-text {
@@ -21,28 +23,26 @@ nav {
         font-size: 48px;
     }
     a {
-        color:rgb(255, 255, 255);
-        opacity: 0.5;
+        color:$on-accent-color;
         font-size: 24px;
         padding: 40px;
     }
     a:hover {
-        color:rgb(77, 32, 32);
+        color:$on-accent-fade;
         font-size: 36px;
     }
 }
 
-$footer-text-color:rgb(214, 156, 156);
 $icon-width:30px;
 
 footer {
-    bottom:0;
+    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     a {
-        color:$footer-text-color;
+        color:$on-accent-color;
         padding: 10px;
     }
     a:hover {
@@ -62,7 +62,7 @@ footer {
         height:$icon-width;
         mask-size:$icon-width $icon-width;
         -webkit-mask-size:$icon-width $icon-width;
-        background-color:$footer-text-color;
+        background-color:$on-accent-color;
     }
     .footer-link {
         display: flex;

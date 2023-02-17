@@ -3,7 +3,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { Model } from './model'
 import { CursorCloud } from './cursor_cloud'
 
-const modelRenderer = new THREE.WebGLRenderer({ canvas: document.getElementById('model-canvas') as HTMLCanvasElement, alpha: true })
+const modelCanvas = document.getElementById('model-canvas') as HTMLCanvasElement
+const modelRenderer = new THREE.WebGLRenderer({ canvas: modelCanvas, alpha: true })
 const cloudRenderer = new THREE.WebGLRenderer({ canvas: document.getElementById('cloud-canvas') as HTMLCanvasElement, alpha: true })
 
 const ratio = setUpRenderer(modelRenderer)
@@ -12,7 +13,7 @@ setUpRenderer(cloudRenderer)
 const scene = new THREE.Scene()
 
 const camera = new THREE.PerspectiveCamera(75, ratio, 0.1, 1000)
-const controls = new OrbitControls(camera, document.getElementById('main') as HTMLElement)
+const controls = new OrbitControls(camera, modelRenderer.domElement /*document.getElementById('main') as HTMLElement*/)
 if (scene == null) {
     throw new Error()
 }

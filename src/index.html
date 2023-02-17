@@ -12,12 +12,58 @@
             <a href="/">blog</a>
         </nav>
         <main id="main">
-            <span id='percent-loaded-label'>Loading Model</span>
-            <h1>Meet Me</h1>
-            <p>- 19 year old from Scotland </br></br>
-                - 2nd year Maths and CompSci at the University of Edinburgh </br></br>
-                - English, French (y un poco de español) </br>
-            </p>
+            <section class="blur first-section">
+
+                <div class="typewriter-wrapper">
+                    <h1 id="title"></h1>
+                    <p id="paragraph"></p>
+                    <button id="continue-scroll-nav" class="continue-scroll mar-top">Continue</button>
+                </div>
+            </section>
+
+            <section class="blur section-canvas">
+                <div class="delay 1">
+                    <p class='delay1'>Sometimes I am</p>
+                    <h2 class="delay2">Coding</h2>
+                    <button class="continue-scroll">Continue</button>
+                </div>
+                <canvas id="model-canvas" class="delay2"><span id='percent-loaded-label'>Loading Model</span></canvas>
+            </section>
+            <section class="blur">
+                <p>Other times you'll find me</p>
+                <iframe id="ytplayer" type="text/html" width="640" height="360"
+                    src="https://www.youtube.com/embed/51WobiUsEiM?autoplay=1&origin=http://pierre.wiki&start=56"
+                    frameborder="0"></iframe>
+                <h2>Playing Music</h2>
+                <button class="continue-scroll">Continue</button>
+            </section>
+            <section class="card-container blur last-section">
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>Music!</h2>
+                        <span>Go read about my developments in music <a href="/projects/music">here</a></span>
+                    </div>
+
+                    <div class="image" id="music"></div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>Code!</h2>
+                        <span>Go read about my coding projects <a href="/projects/code">here</a></span>
+                    </div>
+
+                    <div class="image" id="music"></div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>Blog!</h2>
+                        <span>Go read my blog <a href="/blog">here</a></span>
+                    </div>
+
+                    <div class="image" id="music"></div>
+                </div>
+
+            </section>
 
         </main>
 
@@ -42,7 +88,7 @@
         </footer>
     </div>
     <canvas id="cloud-canvas"></canvas>
-    <canvas id="model-canvas"></canvas>
+
 </body>
 
 </html>

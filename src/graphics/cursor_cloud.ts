@@ -31,7 +31,7 @@ export class CursorCloud {
             this.tx = ((e.clientX) / window.innerWidth) * 2 - 1;
             this.ty = - ((e.clientY) / window.innerHeight) * 2 + 1;
         })
-        document.addEventListener('mouseleave', () => { console.log('hello'); this.isVisible = false })
+        document.addEventListener('mouseleave', () => { this.isVisible = false })
     }
 
     set isVisible(val: boolean) {
