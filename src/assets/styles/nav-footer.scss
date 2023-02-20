@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
-@import 'colors.scss';
+@import './colors.scss';
 
 nav, footer {
     z-index: 2;
@@ -23,12 +23,12 @@ nav {
         font-size: 48px;
     }
     a {
-        color:$on-accent-color;
+        color:$on-accent-light;
         font-size: 24px;
         padding: 40px;
     }
     a:hover {
-        color:$on-accent-fade;
+        color:$on-accent-dark;
         font-size: 36px;
     }
 }
@@ -42,14 +42,14 @@ footer {
     justify-content: space-between;
     align-items: center;
     a {
-        color:$on-accent-color;
+        color:$on-accent-light;
         padding: 10px;
     }
     a:hover {
-        color: white;
+        color: rgb(53, 53, 53);
     }
     a:hover .icon {
-        background-color:white;
+        background-color:rgb(53, 53, 53);
     }
     #central-links {
         display: flex;
@@ -62,7 +62,7 @@ footer {
         height:$icon-width;
         mask-size:$icon-width $icon-width;
         -webkit-mask-size:$icon-width $icon-width;
-        background-color:$on-accent-color;
+        background-color:$on-accent-light;
     }
     .footer-link {
         display: flex;
@@ -80,17 +80,17 @@ footer {
     .neighbour-link:hover {
         color: rgb(98, 13, 95);
     }
-    #linkedin:hover {
-        color: #0a5c8b;
+    #linkedin-link:hover {
+        color: #1a2165;
     }
     a:hover #linkedin-icon {
-        background-color:#0a5c8b;
+        background-color:#1a2165;
     }
-    #youtube:hover {
-        color: #891026;
+    #youtube-link:hover {
+        color: #c00b2c;
     }
     a:hover #youtube-icon {
-        background-color:#891026;
+        background-color:#c00b2c;
     }
     #github-icon {
         mask-image: url('../images/github-icon.png');

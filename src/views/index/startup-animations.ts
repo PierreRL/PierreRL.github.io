@@ -1,12 +1,10 @@
-import { setUpNavAnimation } from "./navbar-animation"
-import { ScrollTracker } from "./scrollManager"
-import { TypeWriter } from './typewriter'
+import { ScrollTracker } from "src/graphics/scrollManager"
+import { TypeWriter } from 'src/graphics/typewriter'
 
 
 const scrollTracker = new ScrollTracker()
 export function setUpStartAnimations() {
     window.onload = startTyping
-    setUpNavAnimation(scrollTracker)
     const blurElements = document.querySelectorAll('.blur')
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -42,12 +40,6 @@ function makeButtonVisible() {
     button.style.opacity = '1'
     button.addEventListener('click', pageScroll)
 }
-
-// function pageScrollAndNav() {
-//     const nav = document.querySelector('nav') as HTMLElement
-//     console.log(nav.clientHeight)
-//     scrollTracker.scrollBy(window.innerHeight + nav.clientHeight)
-// }
 
 function pageScroll() {
     // Added 10 pixels as blurring in does not occur if the page is only just not loaded.

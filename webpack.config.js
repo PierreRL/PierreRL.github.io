@@ -2,13 +2,32 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+
+const routes = ['index', 'blog', 'projects']
+
+let htmlwebpackplugins = []
+let chunks = {}
+let rewrites = []
+
+routes.forEach((route) => {
+    htmlwebpackplugins.push(
+        new HtmlWebpackPlugin({
+            template: './src/views/' + route + '/' + route + '.html',
+            minify: false,
+            filename: route + '.html',
+            chunks: [route]
+        }),
+    )
+    chunks[route] = './src/views/' + route + '/' + route + '.ts'
+    rewrites.push({ from: '/' + route, to: '/' + route + '.html' })
+})
 
 module.exports = {
-    entry: [
-        './src/client.ts',
-    ],
+    entry: chunks,
     module: {
         rules: [
             {
@@ -67,11 +86,18 @@ module.exports = {
             three: path.resolve('./node_modules/three')
         },
         extensions: ['.tsx', '.ts', '.js'],
+        plugins: [new TsconfigPathsPlugin()]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            minify: false
+    plugins: htmlwebpackplugins.concat([
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/views/partials/nav.html'),
+            location: 'navigation',
+            template_filename: '*'
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/views/partials/footer.html'),
+            location: 'customfooter',
+            template_filename: '*'
         }),
         new MiniCssExtractPlugin({
             filename: 'main.[contenthash].css',
@@ -85,8 +111,8 @@ module.exports = {
                     noErrorOnMissing: true
                 }
             ],
-        }),
-    ],
+        }),]
+    ),
     devtool: 'source-map',
     output: {
         filename: 'main.[contenthash].js',
@@ -98,8 +124,11 @@ module.exports = {
         ignored: /node_modules/,
     },
     devServer: {
-        static: './src',
+        static: './',
         port: 8080,
         host: '0.0.0.0',
+        historyApiFallback: {
+            rewrites: rewrites
+        }
     },
 }

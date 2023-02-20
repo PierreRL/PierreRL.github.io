@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-export class CursorCloud {
+class CursorCloud {
 
     private driftSpeeds: THREE.Vector3[] = []
 
@@ -86,4 +86,34 @@ export class CursorCloud {
     }
 }
 
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('cloud-canvas') as HTMLCanvasElement, alpha: true })
+const ratio = setUpRenderer(renderer)
+const scene = new THREE.Scene()
+const camera = new THREE.PerspectiveCamera(75, ratio, 0.1, 1000)
+camera.position.z = (1 / ratio) * (31 / 24)
+const cursor_cloud = new CursorCloud(scene)
+animate()
+
+function animate() {
+    cursor_cloud.udpate()
+    renderer.clear()
+    renderer.render(scene, camera)
+    requestAnimationFrame(animate)
+}
+
+function onResize() {
+    const ratio = setUpRenderer(renderer)
+    cursor_cloud.udpate()
+    camera.aspect = ratio
+    camera.position.z = (1 / ratio) * (31 / 24)
+    camera.updateProjectionMatrix()
+}
+window.addEventListener('resize', onResize, false)
+
+function setUpRenderer(renderer: THREE.WebGLRenderer): number {
+    renderer.autoClear = false
+    const width = window.innerWidth
+    renderer.setSize(width, window.innerHeight)
+    return width / window.innerHeight
+}
 
