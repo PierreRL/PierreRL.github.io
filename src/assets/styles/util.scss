@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
 * {
     margin:0;
     padding:0;
+}
+
+p {
+    font-family: 'Merriweather', serif;
 }
 
 .mar-top {
@@ -32,7 +38,8 @@ html, body, canvas, div {
     font-family: 'Roboto Mono', monospace;
 }
 main {
-    padding:200px 10vw 150px 10vw;
+    flex-grow:1;
+    padding:160px 10vw 100px 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,6 +48,9 @@ main {
     color:white;
     h1 {
         margin-bottom: 20px;
+    }
+    p {
+        margin-bottom:20px;
     }
 }
 #wrapper {
@@ -78,4 +88,10 @@ a {
 }
 #percent-loaded-label {
     color:white;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding:250px 10vw 50px 10vw;
+    }
 }

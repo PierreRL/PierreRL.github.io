@@ -1,4 +1,3 @@
-
 import { start } from './model-manager'
 import { setUpStartAnimations } from './startup-animations'
 import 'src/graphics/default_animations'

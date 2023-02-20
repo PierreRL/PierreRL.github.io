@@ -6,6 +6,7 @@ class CursorCloud {
 
     private readonly maxSpeed = 0.0008
     private _isVisible = false
+    private hasTouched = false
     private tx: number = 0
     private ty: number = 0
 
@@ -27,11 +28,15 @@ class CursorCloud {
 
     private initControls() {
         window.addEventListener('mousemove', (e) => {
+            if (this.hasTouched) return
             this.isVisible = true
             this.tx = ((e.clientX) / window.innerWidth) * 2 - 1;
             this.ty = - ((e.clientY) / window.innerHeight) * 2 + 1;
         })
         document.addEventListener('mouseleave', () => { this.isVisible = false })
+        window.addEventListener('touchstart', (e) => {
+            this.hasTouched = true
+        })
     }
 
     set isVisible(val: boolean) {

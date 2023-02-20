@@ -8,13 +8,16 @@
     <title>pierre.wiki</title>
 </head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TCGXJX6VQL"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B2QZ0B4BV0"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    if (document.location.hostname == "pierre.wiki") {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-TCGXJX6VQL');
+        gtag('config', 'G-B2QZ0B4BV0');
+    }
+
 </script>
 
 <body>
@@ -26,7 +29,7 @@
                 <div class="typewriter-wrapper">
                     <h1 id="title"></h1>
                     <p id="paragraph"></p>
-                    <button id="continue-scroll-nav" class="continue-scroll mar-top">Continue</button>
+                    <button id="continue-scroll-nav" class="continue-scroll">Continue</button>
                 </div>
             </section>
 
@@ -52,7 +55,7 @@
                     <div class="card">
                         <div class="card-inner">
                             <h2>Music!</h2>
-                            <span>Go read about my developments in music <a href="/projects/music">here</a></span>
+                            <span>Go read about my developments in music <a href="/music">here</a></span>
                         </div>
 
                         <div class="image" id="music-image"></div>
@@ -60,7 +63,7 @@
                     <div class="card">
                         <div class="card-inner">
                             <h2>Code!</h2>
-                            <span>Go read about my coding projects <a href="/projects/code">here</a></span>
+                            <span>Go read about my coding projects <a href="/code">here</a></span>
                         </div>
 
                         <div class="image" id="coding-image"></div>

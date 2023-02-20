@@ -2,7 +2,6 @@
 
 .card-container {
     max-width: 100%;
-    padding:0 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,8 +22,12 @@
         color:$background-color;
         text-align: center;
         padding:10px;
-        h1 {
+        h2 {
+            font-family: 'Roboto Mono', sans-serif;
             text-align: center;
+        }
+        span {
+            font-family: 'Merriweather', serif;
         }
         span a {
             color:$on-accent-light;
@@ -64,7 +67,17 @@
         background-position:  0 20;
         background-image: url('../images/frisbee.jpg');
     }
+    #shortbread-image {
+        background-position:  top;
+        background-image: url('../images/shortbread.png');
+    }
 }
 .card:hover .image {
     background-size: 150%;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width:90%;
+    }
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
 @import './colors.scss';
 
 nav, footer {
@@ -106,3 +106,28 @@ footer {
     }
 }
 
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        padding:20px 0;
+        a {
+            padding:10px;
+        }
+    }
+    footer {
+        position: relative;
+        flex-direction: column;
+        padding:20px 0;
+        width: 100%;
+        & > * {
+            padding:10px;
+        }
+    }
+}
+@media (max-width: 500px) {
+    footer {
+        #central-links {
+            flex-direction: column;
+        }
+    }
+}

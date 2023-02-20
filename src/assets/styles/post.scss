@@ -1,0 +1,38 @@
+@import './colors.scss';
+
+main.post {
+    padding-left:25%;
+    padding-right:25%;
+    & > p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom:10px;
+    }
+    & > h1 {
+        font-size:56px;
+        margin-bottom:25px;
+    }
+    & > h2 {
+        font-family: 'Merriweather', serif;
+        margin-top:10px;
+        margin-bottom:5px;
+    }
+    a {
+        color:$accent-color;
+    }
+    a:hover {
+        color:$off-white;
+    }
+}
+@media (max-width: 1200px) {
+    main.post {
+        padding-left:15%;
+        padding-right:15%;
+    }
+}
+@media (max-width: 800px) {
+    main.post {
+        padding-left:5%;
+        padding-right:5%;
+    }
+}

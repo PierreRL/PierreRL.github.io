@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
-const routes = ['index', 'blog', 'projects']
+const routes = ['index', 'blog', 'projects', 'music', 'coding', 'shortbread']
 
 let htmlwebpackplugins = []
 let chunks = {}
@@ -19,7 +19,8 @@ routes.forEach((route) => {
             template: './src/views/' + route + '/' + route + '.html',
             minify: false,
             filename: route + '.html',
-            chunks: [route]
+            chunks: [route],
+            favicon: './src/assets/images/favicon.png',
         }),
     )
     chunks[route] = './src/views/' + route + '/' + route + '.ts'
