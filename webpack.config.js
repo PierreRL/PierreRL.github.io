@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
-const routes = ['index', 'blog', 'projects', 'music', 'coding', 'shortbread']
+const routes = ['index', 'blog', 'projects', 'music', 'coding', 'shortbread', 'solopianocompositions', 'southamerica', 'frisbee']
 
 let htmlwebpackplugins = []
 let chunks = {}
