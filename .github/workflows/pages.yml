@@ -22,7 +22,7 @@ jobs:
           npm run build
       # Upload the 'dist' directory to be used in the deploy job
       - name: Upload pages artifact 📦
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
 
