@@ -49,32 +49,21 @@ on:
 #         uses: actions/deploy-pages@v3
 
 
+permissions:
+  contents: write
 jobs:
-  # Build job
-  build:
-    # Specify runner +  build & upload the static files as an artifact
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Build static files
-        id: build
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
           npm ci
           npm run build
 
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: dist/
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          folder: dist # The folder the action should deploy.
