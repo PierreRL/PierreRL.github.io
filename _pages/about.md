@@ -2,22 +2,21 @@
 layout: about
 title: about
 permalink: /
-subtitle: > 
+subtitle: >
   Legal: Pierre Lardet
 
 profile:
   align: right
   image: swiss_snow.jpg
   image_circular: true # crops the image to make it circular
-  more_info:
-    Swiss Snow 🏔️ :)
+  more_info: Swiss Snow 🏔️ :)
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hey!👋 I'm Pierre. I'm in my 4th year of my Bachelors of Maths and Computer Science at [The University of Edinburgh](https://www.ed.ac.uk/). I also went on exchange last year to [EPFL](https://www.epfl.ch/en/). 
+Hey!👋 I'm Pierre. I'm in my 4th year of my Bachelors of Maths and Computer Science at [The University of Edinburgh](https://www.ed.ac.uk/). I also went on exchange last year to [EPFL](https://www.epfl.ch/en/).
 
 I'm interested in foundational machine learning research that is mathematically interesting and useful. This spans topics like uncertainty quantification, geometric learning, Bayesian optimisation, interpretability and learning from imbalanced data. I'm applying to Master's programs next year where I hope to further my knowledge and continue learning about how to do good research.
 

@@ -33,20 +33,19 @@ layout: default
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info" style="text-align:center">{{ page.profile.more_info }}</div>
+          <!-- Social -->
+          {% if page.social %}
+            <div class="social">
+              <div class="contact-icons">{% include social.liquid %}</div>
+
+              {% comment %} <div class="contact-note">{{ site.contact_note }}</div> {% endcomment %}
+            </div>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
@@ -65,12 +64,14 @@ layout: default
     {% endif %}
 
     <!-- Selected papers -->
-    {% comment %} {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %} {% endcomment %}
+    {% comment %}
+      {% if page.selected_papers %}
+        <h2>
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        </h2>
+        {% include selected_papers.liquid %}
+      {% endif %}
+    {% endcomment %}
 
     {% if site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
