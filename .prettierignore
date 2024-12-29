@@ -11,6 +11,7 @@ node_modules/**
 assets/**
 readme_preview/**
 _pages_unused/**
+old_folio/**
 
 # Ignore binary files and other non-code files
 *.png
