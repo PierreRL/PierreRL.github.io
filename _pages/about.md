@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: >
   Legal: Pierre Lardet
@@ -24,4 +24,4 @@ I serve on the committee of [EdinburghAI](https://edinburghai.org) where I creat
 
 Feel free to reach out at `lardet[dot]pierre[at]gmail.com` :)
 
-To see an older and much less serious verison of this folio site, [click here](./old_folio).
+To see an older and much less serious verison of this folio site, [click here](/old_folio/).
