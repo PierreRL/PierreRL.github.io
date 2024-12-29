@@ -11,7 +11,7 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    <p class="desc" style="font-style:italic">{{ page.subtitle }}</p>
   </header>
   <article>
     {% if page.profile %}
@@ -32,12 +32,21 @@ layout: default
           %}
         {% endif %}
         {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          <div class="more-info" style="text-align:center">{{ page.profile.more_info }}</div>
         {% endif %}
       </div>
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
@@ -56,21 +65,12 @@ layout: default
     {% endif %}
 
     <!-- Selected papers -->
-    {% if page.selected_papers %}
+    {% comment %} {% if page.selected_papers %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     {% if site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

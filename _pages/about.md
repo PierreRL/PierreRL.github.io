@@ -2,23 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: > 
+  Legal: Pierre Lardet
 
 profile:
   align: right
   image: swiss_snow.jpg
   image_circular: true # crops the image to make it circular
-  more_info: >
-    Pierre Mackenzie
-    (Legal: Pierre Lardet)
+  more_info:
+    Swiss Snow 🏔️ :)
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hey!👋 I'm Pierre. I'm in my 4th year of my Bachelors of Maths and Computer Science at [The University of Edinburgh](https://www.ed.ac.uk/). I also went on exchange last year to [EPFL](https://www.epfl.ch/en/). 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I'm interested in foundational machine learning research that is mathematically interesting and useful. This spans topics like uncertainty quantification, geometric learning, Bayesian optimisation, interpretability and learning from imbalanced data. I'm applying to Master's programs next year where I hope to further my knowledge and continue learning about how to do good research.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I serve on the committee of [EdinburghAI](https://edinburghai.org) where I create and run [ML workshops](https://github.com/EdinburghAI/workshops). I shall be recording videos of these workshops next semester! I'm a beginner's coach for [Ro Sham Bo](https://ultimaf.eusu.ed.ac.uk/), Edinburgh University's Ultimate Frisbee Club. I have also competed internationally at orienteering, played tennis, badminton, handball and am happiest when hiking, skiing and scrambling. I also play the piano and guitar and you'll regularly find me composing on the piano.
+
+Feel free to reach out at `lardet[dot]pierre[at]gmail.com` :)
