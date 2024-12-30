@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+    <p class="post-meta">
+      {% if page.date %}Created on {{ page.date | format_date }}{% endif %}
+      {% if page.author %}
+        by {{ page.author }}
+      {% else %}
+        by {{ site.first_name }}
+        {{ site.last_name }}
+      {% endif %}
+      {% if page.last_updated %} | Last updated {{ page.last_updated | format_date }}{% endif %}
+      {% if page.github %}
+        |
+        <a href="{{ page.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
+      {% endif %}
+      {% if page.meta %}• {{ page.meta }}{% endif %}
+    </p>
+  </header>
+
+  <article>
+    {{ content }}
+  </article>
+
+  {% if page.related_publications %}
+    <h2>References</h2>
+    <div class="publications">
+      {% bibliography --cited_in_order %}
+    </div>
+  {% endif %}
+
+  {% if page.enable_comments == false or page.enable_comments == true %}
+    {% assign enable_comments = page.enable_comments %}
+  {% else %}
+    {% assign enable_comments = true %}
+  {% endif %}
+  {% if site.giscus and enable_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+</div>

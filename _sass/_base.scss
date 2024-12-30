@@ -191,6 +191,15 @@ ul.task-list input[type="checkbox"] {
 
   .card-body {
     padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+
+    .card-date {
+      color: var(--global-text-color-light);
+    }
+
+    .row .github-icon .icon a i::before {
+      color: var(--global-text-color);
+      font-size: 2rem;
+    }
   }
 }
 
@@ -239,9 +248,8 @@ ul.task-list input[type="checkbox"] {
 }
 
 .post-description {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   font-size: 0.875rem;
-
   a {
     color: inherit;
 
@@ -920,10 +928,18 @@ html.transition *:after {
 
 // Extra Markdown style (post Customization)
 .post {
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
   .post-meta {
     color: var(--global-text-color-light);
     font-size: 0.875rem;
     margin-bottom: 0;
+    .gh-icon {
+      color: var(--global-text-color-light);
+      font-size: 0.8rem;
+    }
   }
 
   .post-tags {

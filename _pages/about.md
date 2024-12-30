@@ -18,15 +18,15 @@ social: true # includes social icons at the bottom of the page
 
 Hey!👋 I'm Pierre. I'm in the 4th year of my BSc in Maths and Computer Science at [The University of Edinburgh ↗](https://www.ed.ac.uk/). I also went on exchange last year to [EPFL ↗](https://www.epfl.ch/en/).
 
-I'm interested in foundational machine learning research that is mathematically interesting and useful. This spans topics like uncertainty quantification, geometric learning, Bayesian optimisation, interpretability and learning from imbalanced data. I'm applying to Master's programs next year where I hope to further my knowledge and continue learning about how to do good research.
+I'm interested in foundational machine learning research that is mathematically interesting and useful. This spans topics like uncertainty quantification, geometric learning, Bayesian optimisation, interpretability and learning from imbalanced data. I'm applying to Master's programs next year where I hope to continue learning about how to do good research.
 
-I serve on the committee of [EdinburghAI ↗](https://edinburghai.org) where I create and run [ML workshops ↗](https://github.com/EdinburghAI/workshops). I shall be recording videos of these workshops next semester! I'm a beginner's coach for [Ro Sham Bo ↗](https://ultimaf.eusu.ed.ac.uk/), Edinburgh University's Ultimate Frisbee Club. I have also competed internationally at orienteering, played tennis, badminton, handball and am happiest when hiking, skiing and scrambling. I also play the piano and guitar and you'll regularly find me composing on the piano.
+I serve on the committee of [EdinburghAI ↗](https://edinburghai.org) where I create and run [ML workshops ↗](https://github.com/EdinburghAI/workshops). I shall be recording videos of these workshops next semester! I'm a beginner's coach for [Ro Sham Bo ↗](https://ultimaf.eusu.ed.ac.uk/), Edinburgh University's Ultimate Frisbee Club. I have also competed internationally at orienteering, played tennis, badminton, handball and am happiest when hiking, skiing and scrambling. I also play the piano and guitar and you'll regularly find me composing.
 
 Feel free to reach out at <a href="mailto:lardet.pierre@gmail.com" id="email-link">`lardet[dot]pierre[at]gmail.com`</a> :)
 
 <div id="copy-notification" class="notification">📋 Copied to clipboard!</div>
 
-To see an older and much less serious verison of this folio site, [click here ↗](/old_folio/).
+To see an older and much less serious verison of this site, [click here ↗](/old_folio/).
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

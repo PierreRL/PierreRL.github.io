@@ -24,8 +24,14 @@ layout: default
       {% bibliography --cited_in_order %}
     </div>
   {% endif %}
-
-  {% if site.giscus and page.giscus_comments %}
-    {% include giscus.liquid %}
-  {% endif %}
+  {% comment %}
+    {% if page.enable_comments == false or page.enable_comments == true %}
+      {% assign enable_comments = page.enable_comments %}
+    {% else %}
+      {% assign enable_comments = true %}
+    {% endif %}
+    {% if site.giscus and enable_comments %}
+      {% include giscus.liquid %}
+    {% endif %}
+  {% endcomment %}
 </div>
