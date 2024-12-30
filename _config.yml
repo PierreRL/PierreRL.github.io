@@ -127,8 +127,8 @@ external_sources:
 # -----------------------------------------------------------------------------
 
 newsletter:
-  enabled: false
-  endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
+  enabled: true
+  endpoint: https://app.loops.so/api/newsletter-form/cm5b0d7ot04d1fvgj3q6n5pvl # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
   # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------

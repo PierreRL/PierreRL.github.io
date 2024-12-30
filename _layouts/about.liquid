@@ -47,6 +47,11 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Newsletter -->
+    {% if site.newsletter.enabled %}
+      {% include newsletter.liquid %}
+    {% endif %}
+
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>
