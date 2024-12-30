@@ -1,4 +1,15 @@
 /*******************************************************************************
+ * Custom Styles
+******************************************************************************/
+
+a span.arrow {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 300;
+  color: var(--global-theme-color);
+}
+
+/*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
@@ -495,8 +506,8 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
   font-size: 0.9rem;
 
   .container {
@@ -891,6 +902,7 @@ pre {
 }
 
 code {
+  font-family: "Computer Modern Typewriter", "Roboto Mono", monospace;
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 3px;

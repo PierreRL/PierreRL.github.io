@@ -9,7 +9,7 @@ last_name: Lardet
 contact_note: >
   Please don't hesitate to reach out :)
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Hey 👋, I'm Pierre Mackenzie (legal: Pierre Lardet). I do some maths and some music.
+  Hey 👋, I'm Pierre Mackenzie. I do some maths and some music.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

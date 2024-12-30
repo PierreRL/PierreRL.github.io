@@ -100,9 +100,7 @@
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {%- if p.permalink contains 'cv' -%}
-                    {%- assign url = p.cv_pdf | prepend: 'assets/pdf/' -%}
-                  {%- elsif p.permalink contains '://' -%}
+                  {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
                     {%- assign url = '/blog/' -%}
@@ -119,11 +117,19 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          <li class="nav-item {% if page.permalink contains 'cv' %}active{% endif %}">
+            <a class="nav-link" href="/assets/pdf/cv.pdf">
+              CV
+              {% if page.permalink contains 'cv' %}
+                <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
           {% if site.search_enabled %}
             <!-- Search -->
-            <li class="nav-item">
+            <li class="nav-item ml-4">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+                <span class="nav-link"> k <i class="ti ti-search"></i></span>
               </button>
             </li>
           {% endif %}

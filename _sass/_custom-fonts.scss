@@ -1,0 +1,90 @@
+/* Font selections */
+
+body {
+  font-family: "Computer Modern Bright", "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+code {
+  font-family: "Computer Modern Typewriter", "Roboto Mono", monospace;
+}
+
+/* Computer Modern fonts */
+
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("/assets/fonts/cmunss.ttf");
+}
+
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("/assets/fonts/cmunsx.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("/assets/fonts/cmunsi.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("/assets/fonts/cmunso.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Computer Modern Bright";
+  src: url("/assets/fonts/cmunbmr.ttf");
+}
+
+@font-face {
+  font-family: "Computer Modern Bright";
+  src: url("/assets/fonts/cmunbsr.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Computer Modern Bright";
+  src: url("/assets/fonts/cmunbmo.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Computer Modern Bright";
+  src: url("/assets/fonts/cmunbso.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("/assets/fonts/cmunrm.ttf");
+}
+
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("/assets/fonts/cmunbx.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("/assets/fonts/cmunti.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("/assets/fonts/cmunbi.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Computer Modern Typewriter";
+  src: url("/assets/fonts/cmuntt.ttf");
+}
