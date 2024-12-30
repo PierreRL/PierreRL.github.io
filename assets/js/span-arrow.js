@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.textContent.includes("\u2197")&&(e.innerHTML=e.innerHTML.replace("\u2197",'<span class="arrow">\u2197</span>'))}))}));
