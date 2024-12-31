@@ -23,10 +23,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "news-i-finished-my-semester-1-exams",
+        },{id: "post-blank-post",
+      
+        title: "Blank Post",
+      
+      description: "Testing",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/blank/";
+        
+      },
+    },{id: "news-i-finished-my-semester-1-exams",
           title: 'I finished my semester 1 exams!',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-cnns-for-style-transfer",
+          title: 'CNNs for Style Transfer',
+          description: "CNNs for Style Transfer",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cnns/";
+            },},{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
