@@ -16,7 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hey!👋 I'm Pierre, a 🇬🇧/🇫🇷 from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 in the 4th year of my BSc in Maths and Computer Science at [The University of Edinburgh ↗](https://www.ed.ac.uk/). I also went on exchange last year to [EPFL ↗](https://www.epfl.ch/en/).
+A 🇬🇧/🇫🇷 from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 in the 4th year of my BSc in Maths and Computer Science at [The University of Edinburgh ↗](https://www.ed.ac.uk/). I also went on exchange last year to [EPFL ↗](https://www.epfl.ch/en/).
 
 I'm interested in foundational machine learning research that is mathematically interesting and useful. This spans topics like uncertainty quantification, geometric learning, Bayesian optimisation, interpretability and learning from imbalanced data. I'm applying to Master's programs next year where I hope to continue learning about how to do good research.
 
