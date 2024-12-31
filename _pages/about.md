@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 subtitle: >
-  Legal: Pierre Lardet
+  Legal: Pierre Lardet (he/him)
 
 profile:
   align: right
@@ -28,6 +28,37 @@ Feel free to reach out at <a href="mailto:lardet.pierre@gmail.com" id="email-lin
 
 To see an older and much less serious verison of this site, [click here ↗](/old_folio/).
 
+<style>
+  /* Style for the notification */
+  .notification {
+    position: fixed;
+    bottom: -50px; /* Start off-screen */
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(50px); /* Move down by 50px when off-screen */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Show the notification (animate in) */
+  .notification.show {
+    opacity: 1;
+    transform: translateY(0); /* Bring it to its natural position */
+    bottom: 20px; /* Visible area */
+  }
+
+  /* Hide the notification (animate out) */
+  .notification.hide {
+    opacity: 0;
+    transform: translateY(50px); /* Slide down */
+  }
+</style>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const emailLink = document.getElementById('email-link');
@@ -39,36 +70,17 @@ To see an older and much less serious verison of this site, [click here ↗](/ol
       navigator.clipboard.writeText(email).then(() => {
         // Show notification
         copyNotification.classList.add('show');
+        
+        // After 2 seconds, start hiding it
         setTimeout(() => {
-          copyNotification.classList.remove('show');
-        }, 2000); // Hide after 2 seconds
+          copyNotification.classList.add('hide');
+          
+          // Remove classes after the animation finishes
+          setTimeout(() => {
+            copyNotification.classList.remove('show', 'hide');
+          }, 300); // Match the duration of the CSS transition
+        }, 1000); // Show for 1 second before hiding
       });
     });
   });
 </script>
-
-<style>
-  /* Style for the notification */
-  .notification {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(20px);
-    z-index: 1000;
-  }
-
-  /* Show the notification */
-  .notification.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-  }
-</style>
