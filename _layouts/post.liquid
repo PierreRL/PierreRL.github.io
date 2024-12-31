@@ -99,6 +99,11 @@ layout: default
     {% include disqus.liquid %}
   {% endif %}
 
+  <!-- Newsletter -->
+  {% if site.newsletter.enabled %}
+    {% include newsletter.liquid %}
+  {% endif %}
+
   {% if page.enable_comments == false or page.enable_comments == true %}
     {% assign enable_comments = page.enable_comments %}
   {% else %}
