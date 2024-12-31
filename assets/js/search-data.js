@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-from-the-andes",
+        },{id: "post-",
+      
+        title: "🥏🥏🥏",
+      
+      description: "The Sport of Ultimate Frisbee",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/ultimate-frisbee/";
+        
+      },
+    },{id: "post-from-the-andes",
       
         title: "From The Andes",
       
@@ -40,9 +51,14 @@ ninja.data = [{
           section: "News",},{id: "news-i-started-rebuilding-this-website",
           title: 'I started rebuilding this website.',
           description: "",
-          section: "News",},{id: "projects-cnns-for-style-transfer",
-          title: 'CNNs for Style Transfer',
-          description: "CNNs for Style Transfer",
+          section: "News",},{id: "projects-topic-segmentation-with-llms",
+          title: 'Topic Segmentation with LLMs',
+          description: "Some reseach I did on an internship. Submitting to ACL 2025.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llms-for-text-segmentation/";
+            },},{id: "projects-style-transfer-with-cnns",
+          title: 'Style Transfer with CNNs',
+          description: "Digital -&gt; Film",
           section: "Projects",handler: () => {
               window.location.href = "/projects/cnns/";
             },},{
