@@ -7,7 +7,7 @@
   <p class="my-2 text-center justify-content-center">Subscribe to receive updates! I won't email too often, promise.</p>
   <form
     class="newsletter-form"
-    action="https://app.loops.so/api/newsletter-form/{{ site.newsletter.endpoint }}"
+    action="{{ site.newsletter.endpoint }}"
     method="POST"
     style="justify-content: {% if include.left %}flex-start{% elsif include.right %}flex-end{% else %}center{% endif %}"
   >

@@ -12,13 +12,13 @@
         %}
       {% endif %}
       <div class="card-body">
+        <h2 class="card-title">{{ project.title }}</h2>
         <div class="d-flex justify-content-between align-items-baseline">
-          <h2 class="card-title">{{ project.title }}</h2>
+          <p class="card-text">{{ project.description }}</p>
           {% if project.date %}
-            <p class="card-date">{{ project.date | date: '%Y' }}</p>
+            <p class="card-date ml-2">{{ project.date | date: '%Y' }}</p>
           {% endif %}
         </div>
-        <p class="card-text">{{ project.description }}</p>
         {% comment %}
           <div class="row ml-1 mr-1 p-0">
             {% if project.github %}
