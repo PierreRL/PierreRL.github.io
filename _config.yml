@@ -177,15 +177,11 @@ include: ["_pages", "_scripts"]
 exclude:
   - _pages_unused/
   - bin/
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
   - lighthouse_results/
   - package.json
