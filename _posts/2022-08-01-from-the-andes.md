@@ -3,8 +3,7 @@ layout: post
 title: From The Andes
 date: 2022-08-01
 description: A South American Escapade
-tags:
-categories: travel
+tags: travel
 related_posts: true
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: project
-title: CNNs for Style Transfer
-description: CNNs for Style Transfer
-importance: 110
+title: Style Transfer with CNNs
+description: Digital -> Film
+date: 2024-06-12
+importance: 10
 category: code
 ---
 
