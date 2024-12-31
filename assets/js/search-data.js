@@ -23,22 +23,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-blank-post",
+        },{id: "post-from-the-andes",
       
-        title: "Blank Post",
+        title: "From The Andes",
       
-      description: "Testing",
+      description: "A South American Escapade",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/blank/";
+          window.location.href = "/blog/from-the-andes/";
         
       },
     },{id: "news-i-finished-my-semester-1-exams",
           title: 'I finished my semester 1 exams!',
           description: "",
-          section: "News",},{id: "news-this-website-is-under-construction",
-          title: 'This website is under construction.',
+          section: "News",},{id: "news-i-started-rebuilding-this-website",
+          title: 'I started rebuilding this website.',
           description: "",
           section: "News",},{id: "projects-cnns-for-style-transfer",
           title: 'CNNs for Style Transfer',
