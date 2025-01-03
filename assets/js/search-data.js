@@ -51,16 +51,31 @@ ninja.data = [{
           section: "News",},{id: "news-i-started-rebuilding-this-website",
           title: 'I started rebuilding this website.',
           description: "",
-          section: "News",},{id: "projects-topic-segmentation-with-llms",
-          title: 'Topic Segmentation with LLMs',
-          description: "Some reseach I did on an internship. Submitting to ACL 2025.",
+          section: "News",},{id: "projects-shortbread",
+          title: 'Shortbread',
+          description: "A News Delivery App for",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/llms-for-text-segmentation/";
+              window.location.href = "/projects/shortbread/";
+            },},{id: "projects-i-want-to-fly",
+          title: 'I want to Fly',
+          description: "A solo piano composition",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/I-want-to-fly/";
             },},{id: "projects-style-transfer-with-cnns",
           title: 'Style Transfer with CNNs',
           description: "Digital -&gt; Film",
           section: "Projects",handler: () => {
               window.location.href = "/projects/cnns/";
+            },},{id: "projects-topic-segmentation-with-llms",
+          title: 'Topic Segmentation with LLMs',
+          description: "Some reseach I did on an internship. Submitting to ACL 2025.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lead-sheet-transription/";
+            },},{id: "projects-topic-segmentation-with-llms",
+          title: 'Topic Segmentation with LLMs',
+          description: "Some reseach I did on an internship. Submitting to ACL 2025.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llms-for-text-segmentation/";
             },},{
         id: 'social-github',
         title: 'GitHub',
