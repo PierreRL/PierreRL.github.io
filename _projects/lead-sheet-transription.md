@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Topic Segmentation with LLMs
-description: Some reseach I did on an internship. Submitting to ACL 2025.
+title: Lead Sheet Transcription
+description: My 4th year Dissertation on ML & Music
 date: 2024-09-01
 last_updated: 2024-12-31
 importance: 1
