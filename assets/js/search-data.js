@@ -66,9 +66,9 @@ ninja.data = [{
           description: "Digital -&gt; Film",
           section: "Projects",handler: () => {
               window.location.href = "/projects/cnns/";
-            },},{id: "projects-topic-segmentation-with-llms",
-          title: 'Topic Segmentation with LLMs',
-          description: "Some reseach I did on an internship. Submitting to ACL 2025.",
+            },},{id: "projects-lead-sheet-transcription",
+          title: 'Lead Sheet Transcription',
+          description: "My 4th year Dissertation on ML &amp; Music",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lead-sheet-transription/";
             },},{id: "projects-topic-segmentation-with-llms",
