@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'
+    gem "jekyll-sass-converter", "~> 3.0"
+    gem "sass-embedded", "~> 1.58"
     gem 'jekyll-archives'
-    gem 'jekyll-email-protect'
+    gem 'jekyll-email-protec'
     gem 'jekyll-feed'
     gem 'jekyll-get-json'
     gem 'jekyll-imagemagick'
