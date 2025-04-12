@@ -20,7 +20,7 @@ A 🇬🇧/🇫🇷 from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 in the 4th year of my BSc 
 
 I'm interested in foundational machine learning research that is mathematically interesting and useful. This spans topics like uncertainty quantification, geometric learning, Bayesian optimisation, interpretability and learning from imbalanced data. I'm applying to Master's programs next year where I hope to continue learning about how to do good research.
 
-I serve on the committee of [EdinburghAI ↗](https://edinburghai.org) where I create and run [ML workshops ↗](https://github.com/EdinburghAI/workshops). I shall be recording videos of these workshops next semester! I'm a beginner's coach for [Ro Sham Bo ↗](https://ultimaf.eusu.ed.ac.uk/), Edinburgh University's Ultimate Frisbee Club. I have also competed internationally at orienteering, played tennis, badminton, handball and am happiest when hiking, skiing and scrambling. I also play the piano and guitar and you'll regularly find me composing.
+I serve on the committee of [EdinburghAI ↗](https://edinburghai.org) where I create and run [ML workshops ↗](https://github.com/EdinburghAI/workshops). I shall be recording videos of these workshops next semester! I'm a beginner's coach for [Ro Sham Bo ↗](https://www.eusu.ed.ac.uk/organisation/ultimatefrisbee/), Edinburgh University's Ultimate Frisbee Club. I have also competed internationally at orienteering, played tennis, badminton, handball and am happiest when hiking, skiing and scrambling. I also play the piano and guitar and you'll regularly find me composing.
 
 Feel free to reach out at <a href="mailto:lardet.pierre@gmail.com" id="email-link">`lardet[dot]pierre[at]gmail.com`</a> :)
 
