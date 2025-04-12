@@ -5,7 +5,7 @@ group :jekyll_plugins do
     gem "jekyll-sass-converter", "~> 3.0"
     gem "sass-embedded", "~> 1.58"
     gem 'jekyll-archives'
-    gem 'jekyll-email-protec'
+    gem 'jekyll-email-protect'
     gem 'jekyll-feed'
     gem 'jekyll-get-json'
     gem 'jekyll-imagemagick'
