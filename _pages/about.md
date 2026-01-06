@@ -9,24 +9,31 @@ profile:
   align: right
   image: swiss_snow.jpg
   image_circular: true # crops the image to make it circular
-  more_info: Swiss Snow 🏔️ :)
+  more_info: In the Swiss Snow 🏔️ :)
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-A 🇬🇧/🇫🇷 from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 in the 4th year of my BSc in Maths and Computer Science at [The University of Edinburgh ↗](https://www.ed.ac.uk/). I also went on exchange last year to [EPFL ↗](https://www.epfl.ch/en/).
+A 🇬🇧/🇫🇷 from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 living in 🇨🇦 doing an MSc in Computer Science at UBC in Vancouver supervised by [Kevin Leyton-Brown](https://www.cs.ubc.ca/~kevinlb/index.html) and [Serena Wang](https://serenalwang.com/). I completed by BSc in Computer Science and Mathematics from The University of Edinburgh, during which I went on exchange to EPFL for a year.
 
-I'm interested in foundational machine learning research that is mathematically interesting and useful. This spans topics like uncertainty quantification, geometric learning, Bayesian optimisation, interpretability and learning from imbalanced data. I'm applying to Master's programs next year where I hope to continue learning about how to do good research.
+I'm interested in various parts of machine learning and modern AI. Some questions I find motivating are:
 
-I serve on the committee of [EdinburghAI ↗](https://edinburghai.org) where I create and run [ML workshops ↗](https://github.com/EdinburghAI/workshops). I shall be recording videos of these workshops next semester! I'm a beginner's coach for [Ro Sham Bo ↗](https://www.eusu.ed.ac.uk/organisation/ultimatefrisbee/), Edinburgh University's Ultimate Frisbee Club. I have also competed internationally at orienteering, played tennis, badminton, handball and am happiest when hiking, skiing and scrambling. I also play the piano and guitar and you'll regularly find me composing.
+- How should we evaluate modern LLMs?
+- How can we ensure that large, private companies produce AI for the public good?
+- How can we make LLMs more transparent, fair and trustworthy?
+- Why do neural networks learn functions that generalise?
+
+I am an advocate for broad machine learning education. I served on the committee of [EdinburghAI](https://edinburghai.org) where I created and delivered a series of [ML workshops](https://github.com/EdinburghAI/workshops). I have completed internships at [Jane Street](https://www.janestreet.com/) and [Optiver](https://optiver.com/), and before that at an AI start-up, [Adarga](https://adarga.ai/).
+
+I currently live at [Green College](https://greencollege.ubc.ca/), where I run some sports events. I have also competed internationally at orienteering, played tennis, badminton, handball and am happiest when hiking, skiing and scrambling. I also play the piano and guitar and you'll regularly find me composing, arranging or playing with other people.
 
 Feel free to reach out at <a href="mailto:lardet.pierre@gmail.com" id="email-link">`lardet[dot]pierre[at]gmail.com`</a> :)
 
 <div id="copy-notification" class="notification">📋 Copied to clipboard!</div>
 
-To see an older and much less serious verison of this site, [click here ↗](/old_folio/).
+<!-- To see an older and less serious version of this site, [click here](/old_folio/). -->
 
 <style>
   /* Style for the notification */
