@@ -18,12 +18,13 @@ social: true # includes social icons at the bottom of the page
 
 A 🇬🇧/🇫🇷 from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 living in 🇨🇦 doing an MSc in Computer Science at UBC in Vancouver supervised by [Kevin Leyton-Brown](https://www.cs.ubc.ca/~kevinlb/index.html) and [Serena Wang](https://serenalwang.com/). I completed by BSc in Computer Science and Mathematics from The University of Edinburgh, during which I went on exchange to EPFL for a year.
 
-I'm interested in various parts of machine learning and modern AI. Some questions I find motivating are:
+I'm interested in various parts of machine learning and modern AI. Some questions I find interesting are:
 
-- How should we evaluate modern LLMs?
+- How should we evaluate frontier models?
 - How can we ensure that large, private companies produce AI for the public good?
-- How can we make LLMs more transparent, fair and trustworthy?
+- How can we make neural networks understandable?
 - Why do neural networks learn functions that generalise?
+- How can we train neural networks that exploit properties of the natural world for scientific advancement?
 
 I am an advocate for broad machine learning education. I served on the committee of [EdinburghAI](https://edinburghai.org) where I created and delivered a series of [ML workshops](https://github.com/EdinburghAI/workshops). I have completed internships at [Jane Street](https://www.janestreet.com/) and [Optiver](https://optiver.com/), and before that at an AI start-up, [Adarga](https://adarga.ai/).
 
